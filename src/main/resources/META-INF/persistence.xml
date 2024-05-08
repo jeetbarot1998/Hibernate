@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence
+             http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd"
+             version="2.1">
+    <persistence-unit name="pu" >
+        <!-- Add your entity classes here -->
+        <!-- <class>com.example.Student</class> -->
+
+        <!-- Define properties for database connection -->
+        <properties>
+            <!-- JDBC driver -->
+            <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+
+            <!-- Database URL -->
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://sql5.freesqldatabase.com:3306/sql5701956"/>
+
+            <!-- Database username -->
+            <property name="javax.persistence.jdbc.user" value="sql5701956"/>
+
+            <!-- Database password -->
+            <property name="javax.persistence.jdbc.password" value="ZMbeaDJqCP"/>
+
+            <!-- Hibernate dialect (for example, MySQL) -->
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect"/>
+
+            <!-- Other Hibernate and JPA properties -->
+        </properties>
+    </persistence-unit>
+</persistence>

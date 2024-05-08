@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+
+    <!-- Database connection settings -->
+    <session-factory>
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://sql5.freesqldatabase.com:3306/sql5701956</property>
+        <property name="hibernate.connection.username">sql5701956</property>
+        <property name="hibernate.connection.password">ZMbeaDJqCP</property>
+
+        <property name="hbm2ddl.auto">update</property>
+<!--        To create a new table comment the line above and uncomment the lone below-->
+<!--        <property name="hbm2ddl.auto">create</property>-->
+
+        <!-- Specify dialect for your database -->
+<!--        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>-->
+
+<!--        &lt;!&ndash; Echo all executed SQL to stdout &ndash;&gt;-->
+        <property name="hibernate.show_sql">true</property>
+
+<!--        &lt;!&ndash; Format SQL for better readability &ndash;&gt;-->
+        <property name="hibernate.format_sql">true</property>
+
+<!--        2nd Level caching-->
+        <property name="hibernate.cache.use_query_cache">true</property>
+        <property name="hibernate.cache.use_second_level_cache">true</property>
+        <property name="hibernate.cache.region.factory_class">org.hibernate.cache.ehcache.EhCacheRegionFactory</property>
+
+        <!--        &lt;!&ndash; Specify location of mapping files &ndash;&gt;-->
+<!--        &lt;!&ndash; <mapping resource="path/to/YourEntity.hbm.xml"/> &ndash;&gt;-->
+
+<!--        &lt;!&ndash; Alternatively, you can use annotated classes &ndash;&gt;-->
+<!--        &lt;!&ndash; <mapping class="com.yourpackage.YourEntity"/> &ndash;&gt;-->
+
+<!--        &lt;!&ndash; Enable Hibernate's automatic session context management &ndash;&gt;-->
+<!--        <property name="hibernate.current_session_context_class">thread</property>-->
+
+<!--        &lt;!&ndash; Specify hibernate connection pool settings &ndash;&gt;-->
+        <property name="hibernate.c3p0.min_size">5</property>
+        <property name="hibernate.c3p0.max_size">20</property>
+        <property name="hibernate.c3p0.timeout">300</property>
+        <property name="hibernate.c3p0.max_statements">50</property>
+        <property name="hibernate.c3p0.idle_test_period">3000</property>
+<!--        <mapping class="org.ORM.Alien"/>-->
+    </session-factory>
+</hibernate-configuration>
